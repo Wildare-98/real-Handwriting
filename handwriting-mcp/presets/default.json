@@ -1,0 +1,15 @@
+{
+    "font": "青叶手写体.ttf",
+    "paper": "white",
+    "font_size": 90,
+    "line_height": 100,
+    "line_y_jitter": 3,
+    "line_slope_min": -35,
+    "line_slope_max": 35,
+    "line_slope_limit": 40,
+    "line_slope_chance": 0.5,
+    "line_slope_recovery": 0.85,
+    "mistake_chance": 0.01,
+    "mistake_crossout_lines": 15,
+    "mistake_crossout_thickness": 4.0
+}

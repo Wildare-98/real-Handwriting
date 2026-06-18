@@ -1,0 +1,32 @@
+[project]
+name = "handwriting-mcp"
+version = "1.0.0"
+description = "MCP server for rendering text as realistic handwriting (PNG + PDF)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Xu Yiyang" }
+]
+keywords = ["mcp", "handwriting", "ocr", "rendering", "text-to-image"]
+
+dependencies = [
+    "mcp>=1.0.0",
+    "Pillow>=10.0.0",
+    "reportlab>=4.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+handwriting-mcp = "handwriting_mcp.server:main"
+handwriting-mcp-sse = "handwriting_mcp.server:main_sse"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["handwriting_mcp*"]
+
+[tool.setuptools.package-data]
+handwriting_mcp = ["fonts/*.ttf", "fonts/*.otf"]

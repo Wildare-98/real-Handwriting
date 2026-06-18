@@ -1,0 +1,23 @@
+# Smithery MCP Server manifest
+# See: https://smithery.ai/docs
+
+name: handwriting-mcp
+version: 1.0.0
+description: Render text as realistic handwritten A4 pages (PNG + PDF)
+
+tools:
+  - name: handwriting_render
+    description: Render text content as handwriting-style A4 pages
+  - name: handwriting_list_presets
+    description: List available handwriting rendering presets
+
+runtime: python
+transport: stdio
+
+entrypoint:
+  command: python
+  args:
+    - -m
+    - handwriting_mcp.server
+
+repository: https://github.com/xuyiyang/handwriting-mcp
